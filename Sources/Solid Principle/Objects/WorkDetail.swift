@@ -1,14 +1,19 @@
 //
-//  File.swift
-//  
-//
 //  Created by Omar Allaham on 8/17/22.
 //
 
 import Foundation
 
 public struct WorkDetail {
+    public let title: String
+    public let subtitle: String
     
+    public init(title: String = "Random title \(UUID().uuidString)",
+                subtitle: String = "Random subtitle \(UUID().uuidString)") {
+        
+        self.title = title
+        self.subtitle = subtitle
+    }
 }
 
 
