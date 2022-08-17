@@ -43,7 +43,7 @@ extension WorkPerforming {
 
 
 
-fileprivate struct GoogleAnalytics {
+struct GoogleAnalytics {
     func log(_ message: String) {
         
     }

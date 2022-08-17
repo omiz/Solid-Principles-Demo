@@ -36,13 +36,12 @@ final class CrashlyticWorkPerformer: WorkPerforming {
 
 extension WorkPerforming {
     
-    public func logToCrashlytic(_ instance: Crashlytic = Crashlytic()) -> WorkPerforming {
-        CrashlyticWorkPerformer(fetcher: self, crashlytic: instance)
+    public func logToCrashlytic() -> WorkPerforming {
+        CrashlyticWorkPerformer(performer: self, crashlytic: Crashlytic())
     }
 }
 
-
-fileprivate struct Crashlytic {
+struct Crashlytic {
     func log(_ message: String) {
         
     }

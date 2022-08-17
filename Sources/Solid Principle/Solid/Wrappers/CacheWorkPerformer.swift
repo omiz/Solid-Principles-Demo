@@ -8,6 +8,7 @@
 import Foundation
 
 final class CacheWorkPerformer: WorkPerforming {
+    
     func perform(completion: @escaping (Result<[WorkDetail], Error>) -> Void) {
         completion(WorkDetail.randomResult())
     }

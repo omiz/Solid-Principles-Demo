@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol WorkPerforming {
+public protocol WorkPerforming {
     func perform(completion: @escaping (Result<[WorkDetail], Error>) -> Void)
 }

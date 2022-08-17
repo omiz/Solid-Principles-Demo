@@ -8,6 +8,7 @@
 import Foundation
 import OSLog
 
+@available(macOS 11.0, *)
 final class AnotherClassicWorkPerformer: WorkPerforming {
     
     let logger: Logger = Logger(subsystem: "com.domain.example", category: "TaskFetching")

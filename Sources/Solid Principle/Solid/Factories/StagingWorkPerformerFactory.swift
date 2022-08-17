@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ProductionWorkPerformerFactory {
+struct StagingWorkPerformerFactory {
     
     public func makeWorkPerformer() -> WorkPerforming {
         StagingRemoteWorkPerformer()
