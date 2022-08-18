@@ -3,16 +3,17 @@
 //
 
 import Foundation
+import SolidPrinciples
 
-struct ProductionWorkPerformerFactory {
+struct StagingWorkPerformerFactory {
     
     public func makeWorkPerformer() -> WorkPerforming {
-        ProductionRemoteWorkPerformer()
+        StagingRemoteWorkPerformer()
+            .fallback(to: DemoWorkPerformer())
             .fallback(to: DataBaseWorkPerformer())
             .logToCrashlytic()
+            .logToGoogleAnalytics()
             .retry(count: 3)
             .completeOnMainQueue()
     }
-    
-    
 }

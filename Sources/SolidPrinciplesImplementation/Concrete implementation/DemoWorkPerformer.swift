@@ -3,10 +3,10 @@
 //
 
 import Foundation
+import SolidPrinciples
 
-final class StagingRemoteWorkPerformer: WorkPerforming {
+final class DemoWorkPerformer: WorkPerforming {
     
-    ///Connect to staging and do some work
     func perform(completion: @escaping (Result<[WorkDetail], Error>) -> Void) {
         completion(WorkDetail.randomResult())
     }

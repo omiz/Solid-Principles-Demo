@@ -3,6 +3,7 @@
 //
 
 import Foundation
+import SolidPrinciples
 
 final class RemoteWorkPerformer: WorkPerforming {
     

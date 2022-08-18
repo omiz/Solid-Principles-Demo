@@ -3,8 +3,9 @@
 //
 
 import Foundation
+import SolidPrinciples
 
-final class DemoWorkPerformer: WorkPerforming {
+final class DataBaseWorkPerformer: WorkPerforming {
     
     func perform(completion: @escaping (Result<[WorkDetail], Error>) -> Void) {
         completion(WorkDetail.randomResult())

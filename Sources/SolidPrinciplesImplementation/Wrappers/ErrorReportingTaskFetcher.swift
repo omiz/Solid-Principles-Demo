@@ -3,6 +3,7 @@
 //
 
 import Foundation
+import SolidPrinciples
 
 #if canImport(UIKit)
 import UIKit
