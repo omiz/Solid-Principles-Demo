@@ -25,5 +25,8 @@ let package = Package(
         .testTarget(
             name: "SolidPrincipleTests",
             dependencies: ["SolidPrinciples"]),
+        .testTarget(
+            name: "SolidPrinciplesImplementationTests",
+            dependencies: ["SolidPrinciplesImplementation"]),
     ]
 )
