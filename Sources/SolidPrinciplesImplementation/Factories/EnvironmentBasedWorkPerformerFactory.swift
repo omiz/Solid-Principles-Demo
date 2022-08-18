@@ -10,10 +10,13 @@ public struct EnvironmentBasedWorkPerformerFactory {
     public init() {}
     
     public func makeWorkPerformer() -> WorkPerforming {
-        EnvironmentWorkPerformer()
-            .fallback(to: DataBaseWorkPerformer())
-            .logToCrashlytic()
-            .retry(count: 3)
-            .completeOnMainQueue()
+        EnvironmentWorkPerformer(
+            production: ProductionRemoteWorkPerformer(),
+            staging: StagingRemoteWorkPerformer()
+        )
+        .fallback(to: DataBaseWorkPerformer())
+        .logToCrashlytic()
+        .retry(count: 3)
+        .completeOnMainQueue()
     }
 }

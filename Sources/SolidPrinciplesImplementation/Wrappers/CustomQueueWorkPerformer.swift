@@ -17,15 +17,11 @@ final class CustomQueueWorkPerformer: WorkPerforming {
     }
     
     func perform(completion: @escaping (Result<[WorkDetail], Error>) -> Void) {
-        performer.perform { [weak self] result in
-            guard let self = self else { return }
-            
-            if self.queue == DispatchQueue.main && Thread.isMainThread {
+        performer.perform { result in
+            self.queue.async { [weak self] in
+                guard let self = self else { return }
+                
                 completion(result)
-            } else {
-                self.queue.sync {
-                    completion(result)
-                }
             }
         }
     }

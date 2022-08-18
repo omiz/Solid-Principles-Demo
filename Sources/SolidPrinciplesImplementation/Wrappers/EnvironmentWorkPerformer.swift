@@ -9,7 +9,7 @@ public var externalIsEnvironmentProduction = false
 
 // The WorkPerformer is responsible for holding the logic of deciding which performer to use based on the appropriate environment.
 // the logic of doing the job can be in the passed work performer (production/staging) to allow complete logic separation.
-final class EnvironmentWorkPerformer: WorkPerforming {
+public final class EnvironmentWorkPerformer: WorkPerforming {
     
     private let production: WorkPerforming
     private let staging: WorkPerforming
