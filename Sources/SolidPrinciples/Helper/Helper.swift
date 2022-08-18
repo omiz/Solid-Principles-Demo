@@ -4,7 +4,7 @@
 
 import Foundation
 
-func doExpensiveWork(_ completion: @escaping () -> Void) {
+public func doExpensiveWork(_ completion: @escaping () -> Void) {
     DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 2) {
         completion()
     }

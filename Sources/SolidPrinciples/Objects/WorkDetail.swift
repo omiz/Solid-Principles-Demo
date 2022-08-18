@@ -23,7 +23,7 @@ extension WorkDetail {
         Array(repeating: WorkDetail(), count: Int.random(in: 0...count))
     }
     
-    static func randomResult() -> Result<[WorkDetail], Error> {
+    public static func randomResult() -> Result<[WorkDetail], Error> {
         let isSuccess = Bool.random()
         let tasks = WorkDetail.randomWorkDetailArray()
         let anyError = NSError(domain: "AnyDomain", code: 0)

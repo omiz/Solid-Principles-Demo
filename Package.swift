@@ -16,6 +16,9 @@ let package = Package(
         .target(
             name: "SolidPrinciples",
             dependencies: []),
+        .target(
+            name: "ClassicImplementation",
+            dependencies: ["SolidPrinciples"]),
         .testTarget(
             name: "SolidPrincipleTests",
             dependencies: ["SolidPrinciples"]),
