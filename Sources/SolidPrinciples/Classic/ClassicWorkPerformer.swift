@@ -5,7 +5,7 @@
 import Foundation
 import OSLog
 
-@available(macOS 11.0, *)
+@available(macOS 11.0, iOS 14.0, *)
 final class ClassicWorkPerformer: WorkPerforming {
     
     let logger: Logger = Logger(subsystem: "com.domain.example", category: "TaskFetching")

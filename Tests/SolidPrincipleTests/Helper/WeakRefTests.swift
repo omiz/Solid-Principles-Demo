@@ -6,7 +6,7 @@
 //
 
 import XCTest
-import Solid_Principle
+import SolidPrinciples
 
 final class WeakRefTests: XCTestCase {
 

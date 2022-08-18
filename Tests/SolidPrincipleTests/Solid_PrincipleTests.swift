@@ -1,5 +1,5 @@
 import XCTest
-@testable import Solid_Principle
+@testable import SolidPrinciples
 
 final class Solid_PrincipleTests: XCTestCase {
 }

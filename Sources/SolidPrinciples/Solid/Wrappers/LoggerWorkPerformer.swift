@@ -5,7 +5,7 @@
 import Foundation
 import OSLog
 
-@available(macOS 11.0, *)
+@available(macOS 11.0, iOS 14.0, *)
 final class LoggerWorkPerformer: WorkPerforming {
     
     let logger: Logger
@@ -36,7 +36,7 @@ final class LoggerWorkPerformer: WorkPerforming {
 
 extension WorkPerforming {
     
-    @available(macOS 11.0, *)
+    @available(macOS 11.0, iOS 14.0, *)
     public func log(on logger: Logger) -> WorkPerforming {
         LoggerWorkPerformer(performer: self, logger: logger)
     }
