@@ -5,6 +5,7 @@
 import Foundation
 import SolidPrinciples
 
+// A complete logging to crashlytics can be obtained with the ability to have a full control over the import and the dependency in the project.
 final class CrashlyticWorkPerformer: WorkPerforming {
     
     let crashlytic: Crashlytic
@@ -34,12 +35,15 @@ final class CrashlyticWorkPerformer: WorkPerforming {
 
 extension WorkPerforming {
     
-    public func logToCrashlytic() -> WorkPerforming {
-        CrashlyticWorkPerformer(performer: self, crashlytic: Crashlytic())
+    public func logToCrashlytic(instance: Crashlytic = Crashlytic()) -> WorkPerforming {
+        CrashlyticWorkPerformer(performer: self, crashlytic: instance)
     }
 }
 
-struct Crashlytic {
+public struct Crashlytic {
+    
+    public init() {}
+    
     func log(_ message: String) {
         
     }

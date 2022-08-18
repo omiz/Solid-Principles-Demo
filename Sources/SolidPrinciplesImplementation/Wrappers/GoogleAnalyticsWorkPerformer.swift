@@ -34,14 +34,17 @@ final class GoogleAnalyticsWorkPerformer: WorkPerforming {
 
 extension WorkPerforming {
     
-    public func logToGoogleAnalytics() -> WorkPerforming {
-        GoogleAnalyticsWorkPerformer(performer: self, analytics: GoogleAnalytics())
+    public func logToGoogleAnalytics(instance: GoogleAnalytics = .init()) -> WorkPerforming {
+        GoogleAnalyticsWorkPerformer(performer: self, analytics: instance)
     }
 }
 
 
 
-struct GoogleAnalytics {
+public struct GoogleAnalytics {
+    
+    public init() {}
+    
     func log(_ message: String) {
         
     }

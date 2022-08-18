@@ -5,10 +5,11 @@
 import Foundation
 import SolidPrinciples
 
+// The logic of choosing the correct completion queue is separated from the logic of actually doing the work and can help make the decision on creation time of the WorkPerformer.
 final class CustomQueueWorkPerformer: WorkPerforming {
     
-    let queue: DispatchQueue
-    let performer: WorkPerforming
+    private let queue: DispatchQueue
+    private let performer: WorkPerforming
     
     init(performer: WorkPerforming, queue: DispatchQueue) {
         self.performer = performer

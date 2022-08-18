@@ -1,19 +1,19 @@
 //
-//  Created by Omar Allaham on 8/17/22.
+//  Created by Omar Allaham on 8/18/22.
 //
 
 import Foundation
 import SolidPrinciples
 
-public struct ProductionWorkPerformerFactory {
+public struct EnvironmentBasedWorkPerformerFactory {
     
     public init() {}
     
     public func makeWorkPerformer() -> WorkPerforming {
-        ProductionRemoteWorkPerformer()
+        EnvironmentWorkPerformer()
             .fallback(to: DataBaseWorkPerformer())
             .logToCrashlytic()
             .retry(count: 3)
             .completeOnMainQueue()
-    } 
+    }
 }

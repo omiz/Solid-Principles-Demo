@@ -5,7 +5,9 @@
 import Foundation
 import SolidPrinciples
 
-struct StagingWorkPerformerFactory {
+public struct StagingWorkPerformerFactory {
+    
+    public init() {}
     
     public func makeWorkPerformer() -> WorkPerforming {
         StagingRemoteWorkPerformer()
